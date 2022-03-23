@@ -1,2 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+    font-family: "Amaranth";
+    src: url("/assets/Amaranth-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+
+* {
+    font-family: 'Raleway';
+}
+
+body {
+    background-color: #282626;
+}
