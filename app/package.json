@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && mv dist/app/* ../",
+    "build": "ng build && rm -rf ../assets && rm -f ../*.js ../*.css ../3rdpartylicenses.txt ../index.html ../favicon.ico && mv dist/app/* ../",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

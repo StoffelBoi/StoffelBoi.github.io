@@ -4,17 +4,17 @@
             <div class="text-center">
                 <img 
                     *ngIf="!showVideo"
-                    (click)="showVideo = true;"
-                    src="/assets/overview/animation_jam_animation_2.PNG" 
-                    height="720"
+                    (click)="toggleVideo($event)"
+                    src="/assets/overview/animation_jam_animation_2.PNG"                    
                     class="img-fluid w-100">
                 <iframe 
-                    *ngIf="showVideo"               
-                    class="w-100" height="720"     
+                    *ngIf="showVideo"
+                    [height]="videoHeight"
+                    class="w-100"
                     src="https://www.youtube-nocookie.com/embed/z_qku2adIn4?autoplay=1" 
                     title="YouTube video player" 
                     frameborder="0" 
-                    allow="autoplay; encrypted-media; picture-in-picture" 
+                    allow="autosize; autoplay; encrypted-media; picture-in-picture" 
                     allowfullscreen>
                 </iframe>
             </div>

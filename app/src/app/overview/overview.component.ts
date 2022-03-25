@@ -7,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
   showVideo = false;
+  videoHeight = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleVideo(event: MouseEvent) {
+    const image = event.target as HTMLImageElement;
+    if (image != null) {
+      this.videoHeight = image.clientHeight;
+      this.showVideo = true;
+    }    
+  }
 }
